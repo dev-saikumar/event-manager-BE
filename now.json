@@ -3,18 +3,23 @@
     "builds":[
         {
             "src":"./index.js",
-            "use":"@now/node-server"
+            "use":"@now/node@canary"
         }
     ],
     "routes":[
         {
-            "src":"/about",
+            "src":"/about/",
             "status":200,
             "dest":"/"
         },
         {
             "src":"/getregusers",
             "status":200, 
+            "dest":"/"
+        },
+        {
+            "src":"/labs",
+            "methods":["Get"],
             "dest":"/"
         },
         {
