@@ -19,7 +19,7 @@ app.use("/register",register);
 app.use("/confirm",confirm);
 app.use('/labs',labs);
 
-mongoose.connect('mongodb+srv://couboidsclub:audibenz@cluster0-ax1bc.mongodb.net/test?retryWrites=true&w=majority',{useNewUrlParser: true,useUnifiedTopology: true},(err,client)=>{
+mongoose.connect('$mongo_url',{useNewUrlParser: true,useUnifiedTopology: true},(err,client)=>{
 if(!err){
      app.listen("3000",()=>{
          app.locals.eve="flutter";
